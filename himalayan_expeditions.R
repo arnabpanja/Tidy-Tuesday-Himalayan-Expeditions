@@ -4,11 +4,6 @@ library(ggthemes)
 
 
 
-#tbl_expeditions <- read_csv("C:\\Users\\lenovo\\Documents\\r_data\\himalayan_expeditions\\expeditions.csv")
-#tbl_members <- read_csv("C:\\Users\\lenovo\\Documents\\r_data\\himalayan_expeditions\\members.csv")
-#tbl_peaks <- read_csv("C:\\Users\\lenovo\\Documents\\r_data\\himalayan_expeditions\\peaks.csv")
-
-
 tbl_expeditions <- read_csv("https://raw.githubusercontent.com/tacookson/data/master/himalayan-expeditions/expeditions.csv")
 tbl_members <- read_csv("https://raw.githubusercontent.com/tacookson/data/master/himalayan-expeditions/members.csv")
 tbl_peaks <- read_csv("https://raw.githubusercontent.com/tacookson/data/master/himalayan-expeditions/peaks.csv")
