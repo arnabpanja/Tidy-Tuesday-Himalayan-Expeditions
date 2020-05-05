@@ -4,9 +4,15 @@ library(ggthemes)
 
 
 
-tbl_expeditions <- read_csv("C:\\r_data\\himalayan_expeditions\\expeditions.csv")
-tbl_members <- read_csv("C:\\r_data\\himalayan_expeditions\\members.csv")
-tbl_peaks <- read_csv("C:\\r_data\\himalayan_expeditions\\peaks.csv")
+#tbl_expeditions <- read_csv("C:\\Users\\lenovo\\Documents\\r_data\\himalayan_expeditions\\expeditions.csv")
+#tbl_members <- read_csv("C:\\Users\\lenovo\\Documents\\r_data\\himalayan_expeditions\\members.csv")
+#tbl_peaks <- read_csv("C:\\Users\\lenovo\\Documents\\r_data\\himalayan_expeditions\\peaks.csv")
+
+
+tbl_expeditions <- read_csv("https://raw.githubusercontent.com/tacookson/data/master/himalayan-expeditions/expeditions.csv")
+tbl_members <- read_csv("https://raw.githubusercontent.com/tacookson/data/master/himalayan-expeditions/members.csv")
+tbl_peaks <- read_csv("https://raw.githubusercontent.com/tacookson/data/master/himalayan-expeditions/peaks.csv")
+
 
 # Members who have successfully climbed the peaks
 
@@ -152,6 +158,9 @@ p_deaths_by_age <- filter(tbl_members, died == TRUE, !is.na(age)) %>%
   xlab("Age of Climbers") + ylab("No of Deaths") + ggtitle("Deaths by Age of Climbers")
 
 p_deaths_by_age
+
+# Unclimbed peaks - Top 10 by Heights
+
 
 p_unclimbed_peaks <- filter(tbl_peaks, climbing_status == "Unclimbed") %>% 
   mutate(rown = row_number(desc(height_metres))) %>% 
