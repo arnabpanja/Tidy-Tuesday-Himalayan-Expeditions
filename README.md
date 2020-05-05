@@ -1,5 +1,5 @@
-# Data_Science
-Tidy Tuesday - Himalayan Expeditions
+# Tidy Tuesday Himalayan Expeditions
+
 
 
 This repository has been built with the idea to have all my Exploratory Data Analysis related work on varied topics of Tidy Tuesday. 
